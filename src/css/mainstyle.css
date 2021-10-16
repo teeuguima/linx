@@ -1,8 +1,11 @@
 /*Section 1 - Header */
+#sect1{
+    height: 399px;
+}
+
 
 .bg-oblique{
     background: #707070 0% 0% no-repeat padding-box;
-    height: 399px;
 }
 
 .title-sct-1{
@@ -122,4 +125,166 @@
     font-size: 16px;
     box-shadow: 0px 1px 6px #00000029;
     margin-right: 40px;
+}
+
+/* Section 3 - Grid Product */
+
+#container-product{
+    margin-top: 79px!important;
+}
+
+.box-title-line-half{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.box-title-line-half::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: #707070;
+    z-index:0;
+     
+}
+
+.title-line-half{
+    font-size: 18px; 
+    color: #888888;
+    position:relative; 
+    padding:10px;
+    background: #ffffff;
+    display: inline-block;
+    z-index: 1;
+}
+
+#grid-product{
+    margin-top: 50px;
+}
+
+
+
+.box-product{
+   margin: 0px 0px 39px 0px;
+}
+
+
+
+.img-product{
+    border: 1px solid #707070;
+    width: 200px;
+    height: 150px;
+}
+
+.name-product{
+    margin: 14px 0px 10px 0px;
+    font-size: 14px;
+    color: #888888;
+}
+
+.descript-product{
+    width: 200px;
+    line-height: 16px;
+    font-size: 12px;
+    color: #888888;
+
+}
+
+.previous-value-product{
+    font-size: 12px;
+    color: #888888;
+    margin-bottom: 6px;
+}
+
+.later-value-product{
+    font-size: 16px;
+    color: #888888;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.credit-value-product{
+    font-size: 12px;
+    color: #888888;
+    margin-bottom: 10px;
+}
+
+.btn-buy{
+    border-radius: 4px;
+    border: 1px solid #707070;
+    background-color: #ffffff;
+    color: #888888;
+    font-size: 16px;
+    height: 30px;
+    width: 200px;
+}
+
+.btn-see-more{
+    border-radius: 4px;
+    border: 1px solid #707070;
+    background-color: #ffffff;
+    color: #888888;
+    font-size: 16px;
+    height: 39px;
+    width: 260px;
+    margin-bottom: 128px;
+}
+
+/*Section 4 - Newsletter form */
+#row-newsletter div.col-xl-4:first-child{
+    padding: 0px!important;
+    width: 340px;
+}
+
+#row-newsletter div.col-xl-4:nth-child(2){
+    padding: 0px!important;
+    margin-left: 40px;
+}
+
+
+.paragraph-sect4{
+    color: #888888;
+    font-size: 14px;
+    margin: 44px 0px 39px 0px;
+    text-align: center;
+}
+
+.label-newsletter{
+    color: #888888;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.input-newsletter{
+    border:1px solid #707070;
+    height: 30px;
+    width: 340px;
+}
+
+.btn-send-newsletter{
+    border-radius: 4px;
+    border: 1px solid #707070;
+    background-color: #ffffff;
+    color: #888888;
+    font-size: 16px;
+    height: 39px;
+    width: 260px;
+    margin:50px 0px 71px 0px;
+}
+
+/* Section 5 - Footer */
+
+.footer-phrase{
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 229px 0px 86px 0px;
+    text-align: center;
+}
+
+#sect5{ 
+    height: 293px;
 }

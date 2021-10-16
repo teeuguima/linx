@@ -1,0 +1,1 @@
+//Criação do arquivo JS para comunicação de api, referente a requisição das informações dos produtos.
