@@ -3,10 +3,30 @@
     height: 399px;
 }
 
-
-.bg-oblique{
-    background: #707070 0% 0% no-repeat padding-box;
+.diagonal-box{ /*Classe para container diagonal */
+    position: relative;
+    background-color: #707070;
+    transform: skewY(4deg);
+    height:  350px;
 }
+
+.diagonal-box::before{ /*Pseudoclasse para estilização diagonal, superhero - Camada inferior*/
+    content: '';
+    position: absolute;
+    margin-top: -10%;
+    left: 0;
+    width: 100%;
+    height:  350px;
+    background-color: #707070;
+    clip-path: polygon(0% 0%, 100% 50px, 100% 100%, 0% calc(100% - 50px));
+}
+
+#container-header{
+    position: relative;
+    z-index: 1;
+    transform: skewY(-4deg);
+}
+
 
 .title-sct-1{
     font-size: 20px;
@@ -281,7 +301,7 @@
     color: #ffffff;
     font-size: 12px;
     line-height: 18px;
-    margin: 229px 0px 86px 0px;
+    margin: 157px 0px 86px 0px;
     text-align: center;
 }
 
