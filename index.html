@@ -16,12 +16,12 @@
         <div class="diagonal-box-header"> <!--Container para background diagonal responsivo-->
             <div class="container " id="container-header"> <!--Container de contéudo-->
                 <div class="row">
-                    <div class="col-xl-12 text-center">
+                    <div class="col-12 col-xl-12 text-center">
                         <h4 class="title-sct-1">uma seleção de produtos</h4>
                         <h1 class="title-sct-2">especial para você</h2>
                         <p class="subtitle-sct-1">Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
                     </div>
-                    <div class="col-xl-12 box-buttons-guide" id="grid-btns-header">
+                    <div class="col-12 col-xl-12 box-buttons-guide" id="grid-btns-header">
                         <button class="btn-guide">Conheça a Linx</button>
                         <button class="btn-guide">Ajude o algoritmo</button>
                         <button class="btn-guide">Seus produtos</button>
@@ -34,7 +34,7 @@
     <section id="sect2"> <!--Segunda secção - Formulário-->
         <div class="container-md-fluid" id="container-form">
             <div class="row justify-content-center">
-                <div class="col-md-12 col-xl-6">
+                <div class="col-sm-12 col-md-12 col-xl-6">
                     <h3 class="title-sct2-1">Ajude o algoritmo a ser mais certeiro</h3>
                     <p class="paragraph-sct2-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur. Praesent bibendum arcu risus, sit amet iaculis ex tempus quis. Cras et erat ut tellus vulputate tincidunt. Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum vel urna tortor. Vivamus et arcu non felis tristique eleifend.</p>
                     <p class="paragraph-sct2-1">Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.</p>
@@ -44,13 +44,13 @@
 
                 
                 </div>
-                <div class="col-xl-4"> <!--Formulário para cadastro-->
+                <div class="col-sm-12 col-xl-4"> <!--Formulário para cadastro-->
                     
                         <form action="" id="form-algorithm">
                             <label class="label-sct2-control" for="">Seu nome:</label>
                             <input type="text" class="input-sct2-control" name="" >
     
-                            <label class="label-sct2-control" for="">E-mail</label>
+                            <label class="label-sct2-control" for="">E-mail:</label>
                             <input type="text" class="input-sct2-control"  name="" id="">
     
                             <label class="label-sct2-control" for="">CPF:</label>
@@ -75,8 +75,8 @@
         </div>
     </section id="sect3"> <!--Terceira seção - Grid de Produtos-->
         <div class="container" id="container-product">
-            <div class="row justify-content-center" >
-                <div class="col-xl-10">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-xl-10 padding-sm">
                     <div class="box-title-line-half">
                         <h1 class="title-line-half">Sua seleção especial</h1>
                     </div>
@@ -84,94 +84,113 @@
             </div>
 
             <div class="row justify-content-center" id="grid-product"> <!--Necessita revisão do alinhamento do grid, pois está desalinhado com as bordas do h1-->
-                <div class="col-sm-6 col-xl-3 box-product">
+                <div class="col-12 col-sm-12 col-xl-3 box-product">
                     <div class="img-product">
 
                     </div>
-                    <h4 class="name-product">Nome do produto</h4>
-                    <p class="descript-product">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-                    <p class="previous-value-product">De: R$23,99</p>
-                    <p class="later-value-product">Por: R$19,99</p>
-                    <p class="credit-value-product">ou 2x de R$9,99</p>
-                    <button class="btn-buy">Comprar</button>
+                    <div class="flex-block">
+                        <h4 class="name-product">Nome do produto</h4>
+                        <p class="descript-product">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
+                        <p class="previous-value-product">De: R$23,99</p>
+                        <p class="later-value-product">Por: R$19,99</p>
+                        <p class="credit-value-product">ou 2x de R$9,99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
+                   
                 </div>
-                <div class="col-sm-6 col-xl-3 box-product">
+                <div class="col-12 col-sm-12 col-xl-3 box-product">
                     <div class="img-product">
 
                     </div>
-                    <h4 class="name-product">Nome do produto</h4>
-                    <p class="descript-product">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-                    <p class="previous-value-product">De: R$23,99</p>
-                    <p class="later-value-product">Por: R$19,99</p>
-                    <p class="credit-value-product">ou 2x de R$9,99</p>
-                    <button class="btn-buy">Comprar</button>
+
+                    <div class="flex-block">
+                        <h4 class="name-product">Nome do produto</h4>
+                        <p class="descript-product">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
+                        <p class="previous-value-product">De: R$23,99</p>
+                        <p class="later-value-product">Por: R$19,99</p>
+                        <p class="credit-value-product">ou 2x de R$9,99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
+                    
                 </div>
-                <div class="col-sm-6 col-xl-3 box-product collapsible">
+                <div class="col-12 col-sm-12 col-xl-3 box-product collapsible">
                     <div class="img-product">
 
                     </div>
-                    <h4 class="name-product">Nome do produto</h4>
-                    <p class="descript-product">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-                    <p class="previous-value-product">De: R$23,99</p>
-                    <p class="later-value-product">Por: R$19,99</p>
-                    <p class="credit-value-product">ou 2x de R$9,99</p>
-                    <button class="btn-buy">Comprar</button>
+                    <div class="flex-block">
+                        <h4 class="name-product">Nome do produto</h4>
+                        <p class="descript-product">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
+                        <p class="previous-value-product">De: R$23,99</p>
+                        <p class="later-value-product">Por: R$19,99</p>
+                        <p class="credit-value-product">ou 2x de R$9,99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
-                <div class="col-sm-6 col-xl-3 box-product collapsible">
+                <div class="col-12 col-sm-12 col-xl-3 box-product collapsible">
                     <div class="img-product">
 
                     </div>
-                    <h4 class="name-product">Nome do produto</h4>
-                    <p class="descript-product">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-                    <p class="previous-value-product">De: R$23,99</p>
-                    <p class="later-value-product">Por: R$19,99</p>
-                    <p class="credit-value-product">ou 2x de R$9,99</p>
-                    <button class="btn-buy">Comprar</button>
+                    <div class="flex-block">
+                        <h4 class="name-product">Nome do produto</h4>
+                        <p class="descript-product">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
+                        <p class="previous-value-product">De: R$23,99</p>
+                        <p class="later-value-product">Por: R$19,99</p>
+                        <p class="credit-value-product">ou 2x de R$9,99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
                 <!--Segunda Linha-->
-                <div class="col-sm-6 col-xl-3 box-product collapsible">
+                <div class="col-12 col-sm-12 col-xl-3 box-product collapsible">
                     <div class="img-product">
 
                     </div>
-                    <h4 class="name-product">Nome do produto</h4>
-                    <p class="descript-product">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-                    <p class="previous-value-product">De: R$23,99</p>
-                    <p class="later-value-product">Por: R$19,99</p>
-                    <p class="credit-value-product">ou 2x de R$9,99</p>
-                    <button class="btn-buy">Comprar</button>
+                    <div class="flex-block">
+                        <h4 class="name-product">Nome do produto</h4>
+                        <p class="descript-product">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
+                        <p class="previous-value-product">De: R$23,99</p>
+                        <p class="later-value-product">Por: R$19,99</p>
+                        <p class="credit-value-product">ou 2x de R$9,99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
-                <div class="col-sm-6 col-xl-3 box-product collapsible">
+                <div class="col-12 col-sm-12 col-xl-3 box-product collapsible">
                     <div class="img-product">
 
                     </div>
-                    <h4 class="name-product">Nome do produto</h4>
-                    <p class="descript-product">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-                    <p class="previous-value-product">De: R$23,99</p>
-                    <p class="later-value-product">Por: R$19,99</p>
-                    <p class="credit-value-product">ou 2x de R$9,99</p>
-                    <button class="btn-buy">Comprar</button>
+                    <div class="flex-block">
+                        <h4 class="name-product">Nome do produto</h4>
+                        <p class="descript-product">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
+                        <p class="previous-value-product">De: R$23,99</p>
+                        <p class="later-value-product">Por: R$19,99</p>
+                        <p class="credit-value-product">ou 2x de R$9,99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
-                <div class="col-sm-6 col-xl-3 box-product collapsible">
+                <div class="col-12 col-sm-12 col-xl-3 box-product collapsible">
                     <div class="img-product">
 
                     </div>
-                    <h4 class="name-product">Nome do produto</h4>
-                    <p class="descript-product">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-                    <p class="previous-value-product">De: R$23,99</p>
-                    <p class="later-value-product">Por: R$19,99</p>
-                    <p class="credit-value-product">ou 2x de R$9,99</p>
-                    <button class="btn-buy">Comprar</button>
+                    <div class="flex-block">
+                        <h4 class="name-product">Nome do produto</h4>
+                        <p class="descript-product">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
+                        <p class="previous-value-product">De: R$23,99</p>
+                        <p class="later-value-product">Por: R$19,99</p>
+                        <p class="credit-value-product">ou 2x de R$9,99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
-                <div class="col-sm-6 col-xl-3 box-product collapsible">
+                <div class="col-12 col-sm-12 col-xl-3 box-product collapsible">
                     <div class="img-product">
 
                     </div>
-                    <h4 class="name-product">Nome do produto</h4>
-                    <p class="descript-product">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-                    <p class="previous-value-product">De: R$23,99</p>
-                    <p class="later-value-product">Por: R$19,99</p>
-                    <p class="credit-value-product">ou 2x de R$9,99</p>
-                    <button class="btn-buy">Comprar</button>
+                    <div class="flex-block">
+                        <h4 class="name-product">Nome do produto</h4>
+                        <p class="descript-product">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
+                        <p class="previous-value-product">De: R$23,99</p>
+                        <p class="later-value-product">Por: R$19,99</p>
+                        <p class="credit-value-product">ou 2x de R$9,99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
                 <button class="btn-see-more">Ainda mais produtos aqui</button>
 
@@ -181,19 +200,19 @@
     <section id="sect4"> <!--Quarta seção [Formulário de Newsletter]-->
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-xl-10">
+                <div class="col-sm-12 col-xl-10 padding-sm">
                     <div class="box-title-line-half">
                         <h1 class="title-line-half">Compartilhe a novidade</h1>
                     </div>
                     <p class="paragraph-sect4">Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
                     <form action="">
-                        <div class="row row-cols-2 justify-content-center" id="row-newsletter">
-                            <div class="col-xl-4">
+                        <div class="row row-cols-xl-2 justify-content-start justify-content-xl-center" id="row-newsletter">
+                            <div class="col-sm-12 col-xl-4">
                                 <label for="" class="label-newsletter">Nome do seu amigo:</label>
                                 <br>
                                 <input type="text" name="name-friend" class="input-newsletter">
                             </div>
-                            <div class="col-xl-4">
+                            <div class="col-sm-12 col-xl-4">
                                 <label for="" class="label-newsletter">E-mail:</label>
                                 <br>
                                 <input type="text" name="email-friend" class="input-newsletter">

@@ -2,12 +2,190 @@
 
 
 @media (min-width: 360px) and (max-width: 599px) { /* Dispositivos móveis entre 360px e 600px de largura */
+    #sect1{
+        height: 398px !important;
+    }
+
+    .diagonal-box-header{
+        height: 348px !important;
+        transform: skewY(18deg) !important;
+    }
+
+    .diagonal-box-header::before{
+        height: 388px !important;
+        margin-top: -35% !important;
+    }
     
+    #container-header{
+        transform: skewY(-18deg) !important;
+    }
+
+    .title-sct-1{
+        margin: 66px 0px 0px 0px !important;
+        text-align: left !important;
+        font-weight: normal;
+    }
+
+    .title-sct-2{
+        margin-bottom: 9px !important;
+        text-align: left;
+    }
+
+    .subtitle-sct-1{
+        text-align: left;
+        width: 360px !important;
+        margin: 0px 0px 56px 0px !important;
+    }
+
+    .box-buttons-guide{
+        padding: 0px !important;
+    }
+
+    .btn-guide:first-child{
+        margin: 0px 21px 20px 25px;
+    }
+
+    .btn-guide:nth-child(2){
+        margin: 0px 41px 20px 0px;
+    }
+
+    
+    .btn-guide:nth-child(3){
+        margin: 0px 21px 0px 25px;
+    }
+    
+    .btn-guide:nth-child(4){
+        margin: 0px 41px 0px 0px;
+    }
+
+
+    .title-sct2-1{
+        margin: 29px 0px 17px 16px !important;
+    }
+    
+    .paragraph-sct2-1{
+        margin: 0px 0px 30px 16px !important;
+        width: 386px !important;
+    }
+
+    #form-algorithm{
+        margin: 0px 0px 91px 16px !important;
+    }
+
+    .input-sct2-control{
+        width: 385px !important;
+    }
+
+    .btn-send{
+        width: 383px !important;
+    }
+
+    .padding-sm{
+        padding: 0px !important;
+    }
+
+    .box-title-line-half{
+       margin-bottom: 23px;
+    }
+
+    #container-product{
+        margin-top: 0px !important;
+    }
+
+    #grid-product{
+        margin-top: 0px !important;
+    }
+
+    .box-product{
+        display: flex !important;
+        width: 400px !important;
+        padding: 0px !important;
+        margin: 0px 0px 30px 10px !important;
+    }
+
+    .img-product{
+        width: 169px !important ;
+    }
+
+    .flex-block{
+        display: block !important;
+        margin-left: 23px !important;
+    }
+
+    .name-product{
+        margin: 0px 0px 13px 0px !important;
+    }
+
+    .descript-product{
+        display: none !important;
+    }
+
+    .box-product{
+        margin: 0px 41px 39px 0px;
+        width: 200px;
+     }
+
+     .btn-see-more{
+         margin-bottom: 129px !important;
+     }
+
+    .btn-lot-more {
+        border: 1px solid #707070;
+        background-color: #ffffff;
+        color: #888888;
+        border-radius: 4px;
+        width: 383px;
+        height: 39px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .collapsible:nth-child(n+5){
+        padding: 0 18px;
+        display: none !important;
+        overflow: hidden;
+    }
+
+    .box-title-line-half{
+        margin-bottom: 28px !important;
+    }
+
+    .paragraph-sect4{
+        margin: 0px 20px 28px 17px !important;
+        line-height: 16px;
+        width: 386px !important;
+    }
+
+    #row-newsletter div.col-xl-4:first-child{
+        padding: 0px 0px 0px 16px !important;
+        margin: 0px 0px 20px 16px !important;
+        width: 100% !important;
+    }
+    
+    #row-newsletter div.col-xl-4:nth-child(2){
+        padding: 0px 0px 0px 16px !important;
+        width: 100% !important;
+        margin: 0px 0px 42px 16px !important;
+    }
+
+    .input-newsletter{
+        width: 391px !important;
+    }
 
 }
 
 
 @media (min-width: 600px) and (max-width: 991.98px) { /* Dispositivos móveis entre 600px e 991.98px de largura */
+    .diagonal-box-header{
+        height: 188px !important;
+    }
+
+    .diagonal-box-header::before{
+        height: 188px !important;
+        margin-top: -13% !important;
+    } 
+
     .title-sct-1{
         margin: 31px 0px 5px 0px !important;
     }
@@ -31,14 +209,7 @@
         height: 198px !important;
     }
 
-    .diagonal-box-header{
-        height: 188px !important;
-    }
-
-    .diagonal-box-header::before{
-        height: 188px !important;
-        margin-top: -13% !important;
-    } 
+    
 
     .title-sct2-1{
         display: none !important;
@@ -159,7 +330,7 @@
 }
 
 .subtitle-sct-1{
-    margin-top: 24px;
+    margin: 24px 0px 50px 0px;
     font-size: 14px;
     color: #ffffff;
 }
@@ -173,24 +344,19 @@
 }
 
 .box-buttons-guide{
-    margin-top:50px;
     text-align: center!important;
 }
 
 .btn-guide{
     display: inline-block;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 1.5;
     color: #888888;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
+    border: 1px solid #707070;
     padding: 6px 12px;
     font-size: 14px;
     border-radius: 4px;
@@ -251,18 +417,14 @@
 }
 .btn-send{
     display: inline-block;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 1.5;
     color: #888888;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
     background-color: transparent;
-    border: 1px solid transparent;
     padding: 6px 12px;
     font-size: 14px;
     border-radius: 4px;
@@ -270,7 +432,6 @@
     width: 340px;
     height: 39px;
     font-size: 16px;
-    box-shadow: 0px 1px 6px #00000029;
     margin-right: 40px;
 }
 
@@ -306,6 +467,7 @@
     background: #ffffff;
     display: inline-block;
     z-index: 1;
+    margin-bottom: 0px !important;
 }
 
 #grid-product{
@@ -315,7 +477,7 @@
 
 
 .box-product{
-   margin: 0px 41px 39px 0px;
+   margin: 0px 0px 39px 0px;
 }
 
 
@@ -380,6 +542,10 @@
     margin-bottom: 128px;
 }
 
+.btn-lot-more{
+    display: none;
+}
+
 /*Section 4 - Newsletter form */
 #row-newsletter div.col-xl-4:first-child{
     padding: 0px!important;
@@ -395,7 +561,7 @@
 .paragraph-sect4{
     color: #888888;
     font-size: 14px;
-    margin: 44px 0px 39px 0px;
+    margin-bottom: 39px;
     text-align: center;
 }
 
