@@ -147,6 +147,31 @@ function searchNewProduct(){
     products(prox_url) //Nova consulta será realizada
 }
 
+/*Função que cria o button para exibir mais produtos, na responsividade para email,
+logo, irá funcionar se a tela estiver no intervalo de 600px a 991px de largura*/
+function showButtonLotMore(){
+    sizeWidth = window.innerWidth
+    if(sizeWidth > 599.99 && sizeWidth <= 991){
+        let box_products = document.getElementById("grid-product")
+        btn_lot_more = document.createElement("button")
+        btn_lot_more.classList.add("btn-lot-more")
+        btn_lot_more.innerHTML = "Tem muito mais aqui. Vem ver!"
+        btn_lot_more.setAttribute("onclick", "showMoreProducts()")
+        box_products.appendChild(btn_lot_more) 
+    }
+}
+
+/*Função que revela os produtos restantes na grade assim que o button for clicado,
+Só funciona se a tela estiver no intervalo de 600px a 991px de largura*/
+function showMoreProducts(){
+    show_products = document.getElementsByClassName("box-product")
+    for(i = 0; i < show_products.length; i++){
+        show_products[i].setAttribute("style", "display: block")
+    }
+}
+
+
 
 products(url) //Chamada da função a ser executada.
+showButtonLotMore() //Chamada da função que verifica o tamanho da tela e se estiver no intervalo de largura
 

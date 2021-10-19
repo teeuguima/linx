@@ -4,7 +4,7 @@
 @media (min-width: 360px) and (max-width: 599px) { /* Dispositivos móveis entre 360px e 600px de largura */
     
     /* Section - Header */
-    #sect1{
+    #section-header{
         height: 398px !important;
     }
 
@@ -61,6 +61,18 @@
     }
 
     /* Section Form */
+
+    #collapseAlgorithm{
+        text-decoration: none;
+        pointer-events: visible !important;
+        cursor: auto !important;
+    }
+
+    #drop-angle-down{
+        display: block !important;
+        margin: 3px 0px 0px 35px;
+        color: #707070;
+    }
 
     .title-form-1{
         margin: 29px 0px 17px 16px !important;
@@ -156,7 +168,7 @@
         margin: 42px 0px 85px 0px !important;
     }
 
-    #sect5{
+    #section-footer{
         margin-top: 0px !important;
     }
 
@@ -197,7 +209,7 @@
         display: none !important;
     }
     
-    #sect1{
+    #section-header{
         height: 198px !important;
     }
 
@@ -244,7 +256,7 @@
         margin-top: 0px !important;
     }
 
-    #sect4{
+    #section-newsletter{
         display: none;
     }
 
@@ -252,15 +264,17 @@
         margin: 0px 41px 39px 0px !important;
         width: 200px;
      }
-
-    
+     
+     .box-product:nth-child(n + 3){
+         display: none;
+     }
 
      .btn-see-more{
          display: none;
      }
 
     .btn-lot-more {
-        display: none !important;
+        display: block !important;
         border: 1px solid #707070;
         background-color: #ffffff;
         color: #888888;
@@ -287,7 +301,7 @@
 
 
 /*Section 1 - Header */
-#sect1{
+#section-header{
     height: 399px;
 }
 
@@ -373,6 +387,17 @@
 }
 
 /* Section 2 - Form */
+
+#collapseAlgorithm{
+    text-decoration: none;
+    pointer-events: none;
+    cursor: default;
+}
+
+#drop-angle-down{
+    display: none;
+}
+
 
 .title-form-1{
     margin: 20px 0px 30px 0px;
@@ -634,7 +659,7 @@
     text-align: center;
 }
 
-#sect5{
+#section-footer{
     margin-top: 70px; 
     height: 228px;
 }
