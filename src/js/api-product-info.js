@@ -1,7 +1,7 @@
 //Criação do arquivo JS para comunicação de api, referente a requisição das informações dos produtos.
 
 let url = "https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1"
-
+let prox_url
 
 //Função para validação do email
 function validateEmail(email){
@@ -40,7 +40,7 @@ function submitFormAlgorithm(){
 
 //Função para captura dos campos do formulário de newsletter 
 function submitFormNewsLetter(){
-    noReload(document.getElementById("form-newsletter"))
+    noReload(document.getElementById("form-newsletter")) //Chamada da função para evitar o carregamento
     var name = document.getElementById("form-name-friend").value
     var email = document.getElementById("form-email-friend").value
     
@@ -58,47 +58,47 @@ function getUrl(url){
 
 //Função que cria os elementos em HTML atráves do DOM.
 function createProducts(products, elementHTML){ 
-    let grid_product = document.createElement("div")
-    let box_product = document.createElement("div")
-    grid_product.classList.add("col", "col-sm-12", "col-md-6" , "box-product")
-    elementHTML.appendChild(grid_product)
-
-    let img = document.createElement("img")
+    let grid_product = document.createElement("div") //Container que irá conter os cards do produto
+    grid_product.classList.add("col", "col-sm-12", "col-md-6" , "box-product") //Adicionando as classes ajustes do container
+    elementHTML.appendChild(grid_product) //Inserindo no container pai
+    
+    let flex_block = document.createElement("div") //Container para formartar as informações abaixo da imagem
+    flex_block.classList.add("flex-block")
+    grid_product.appendChild(flex_block)  //Inserindo o container de informações no container principal dos cards
+    
+    let img = document.createElement("img") //Imagem do produto
     img.src = products.image
     img.classList.add("img-product")
-    
 
-    let flex_block = document.createElement("div")
-    flex_block.classList.add("flex-block")
-    let name = document.createElement("h4")
+    let name = document.createElement("h4") //Nome do produto
     name.classList.add("name-product")
     name.innerHTML = products.name
-    flex_block.appendChild(name)
-    grid_product.appendChild(flex_block)   
    
-    let description = document.createElement("p")
+    let description = document.createElement("p") //Descrição
     description.classList.add("descript-product")
     description.innerHTML = products.description
 
-    let old_price = document.createElement("p")
+    let old_price = document.createElement("p") //Preço anterior
     old_price.classList.add("previous-value-product")
     old_price.innerHTML = "De: R$" + products.oldPrice
 
-    let price = document.createElement("p")
+    let price = document.createElement("p") //Preço atual a vista
     price.classList.add("later-value-product")
     price.innerHTML = "Por: R$"+ products.price
 
-    let count = products?.installments.count
-    let value = products?.installments.value
+    let count = products?.installments.count //Número de parcelas limite no Crédito
+    let value = products?.installments.value //Preço de cada parcela no crédito 
 
-    let installments = document.createElement("p")
+    let installments = document.createElement("p") //Inserindo as informações de parcelas
     installments.classList.add("credit-value-product")
     installments.innerHTML = "ou " + count + "x " + "de R$" + value
    
-    let btn_buy = document.createElement("button")
+    let btn_buy = document.createElement("button") //Botão para realizar compra
     btn_buy.classList.add("btn-buy")
     btn_buy.innerHTML = "Comprar"
     
+    /* Adicionando as informações coletadas 
+    no container de Informações Flex_Block */
     flex_block.appendChild(name)
     flex_block.appendChild(description)
     flex_block.appendChild(old_price)
@@ -106,10 +106,10 @@ function createProducts(products, elementHTML){
     flex_block.appendChild(installments)
     flex_block.appendChild(btn_buy)
     
+    /* Adicionando a imagem acima do 
+    Flex_Block no container de card do produto */ 
     grid_product.appendChild(img)
     grid_product.appendChild(flex_block)
-
-    return box_product
 }
 
 
@@ -118,26 +118,35 @@ function createProducts(products, elementHTML){
     chama a função de criação dos elementos no DOM. Por fim, os insere no container responsável
     pela grade de produtos. 
 */
-function products(){ 
-    let data_products = getUrl(url) 
-    let products = JSON.parse(data_products)
-    console.log(products)
-    let box_products = document.getElementById("grid-product")
-    products?.products.forEach(element => {
-        console.log(element)
-        let product = createProducts(element, box_products)
+function products(url_product){ 
+    let data_products = getUrl(url_product) //Recebendo os dados da API
+    let products = JSON.parse(data_products) //Convertendo os dados em JSON
+    prox_url ="https://"+ products?.nextPage //Um Setter para a próxima URL de consulta
+ 
+    let box_products = document.getElementById("grid-product") //Buscando o container pai, onde o container filho com os cards será inserido
+    products?.products.forEach(element => { //Percorre o Array de JSON produtos, inserido no JSON
+        createProducts(element, box_products) 
     });
 
-    let div_btn = document.createElement("div")
+    let div_btn = document.createElement("div") //Criando o container que ficará abaixo do container de produtos, para centralizar o button
     div_btn.classList.add("col-sm-12", "col-xl-12", "text-center")
 
-    let btn_see_more = document.createElement("button")
+    let btn_see_more = document.createElement("button") //Button para gerar novas consultas de produtos
     btn_see_more.classList.add("btn-see-more")
+    btn_see_more.setAttribute("onclick", "searchNewProduct()")
+    btn_see_more.setAttribute("id", "button-see-more")
     btn_see_more.innerHTML = "Ainda mais produtos aqui"
 
-    div_btn.appendChild(btn_see_more)
-    box_products.appendChild(div_btn)
+    div_btn.appendChild(btn_see_more) //Adição do button no container 
+    box_products.appendChild(div_btn) //Adição do container do button, no container da grade de produtos
 }
 
-products() //Chamada da função a ser executada.
+function searchNewProduct(){
+    let btn_see_more = document.getElementById("button-see-more") //Buscando o button no DOM pelo ID 
+    btn_see_more.parentNode.removeChild(btn_see_more) //Excluindo o button do DOM
+    products(prox_url) //Nova consulta será realizada
+}
+
+
+products(url) //Chamada da função a ser executada.
 
