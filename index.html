@@ -17,9 +17,9 @@
             <div class="container " id="container-header"> <!--Container de contéudo-->
                 <div class="row">
                     <div class="col-12 col-xl-12 text-center">
-                        <h4 class="title-sct-1">uma seleção de produtos</h4>
-                        <h1 class="title-sct-2">especial para você</h2>
-                        <p class="subtitle-sct-1">Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
+                        <h4 class="title-header-1">uma seleção de produtos</h4>
+                        <h1 class="title-header-2">especial para você</h2>
+                        <p class="subtitle-header-1">Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
                     </div>
                     <div class="col-12 col-xl-12 box-buttons-guide" id="grid-btns-header">
                         <button class="btn-guide">Conheça a Linx</button>
@@ -32,12 +32,12 @@
         </div>
     </section>
     <section id="sect2"> <!--Segunda secção - Formulário-->
-        <div class="container-md-fluid" id="container-form">
+        <div class="container" id="container-form">
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-12 col-xl-6">
-                    <h3 class="title-sct2-1">Ajude o algoritmo a ser mais certeiro</h3>
-                    <p class="paragraph-sct2-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur. Praesent bibendum arcu risus, sit amet iaculis ex tempus quis. Cras et erat ut tellus vulputate tincidunt. Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum vel urna tortor. Vivamus et arcu non felis tristique eleifend.</p>
-                    <p class="paragraph-sct2-1">Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.</p>
+                    <h3 class="title-form-1">Ajude o algoritmo a ser mais certeiro</h3>
+                    <p class="paragraph-form-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur. Praesent bibendum arcu risus, sit amet iaculis ex tempus quis. Cras et erat ut tellus vulputate tincidunt. Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum vel urna tortor. Vivamus et arcu non felis tristique eleifend.</p>
+                    <p class="paragraph-form-1">Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.</p>
                     
                     <h3 class="title-email-mkt">Olá, Fulano</h3>
                     <p class="descript-email-mkt">Fizemos uma lista especial de produtos apenas para você. Isso mesmo: nesta lista temos só produtos que você pode gostar. Seu amigo Ciclano lhe recomendou essa lista especial. Olha só:</p>
@@ -47,23 +47,23 @@
                 <div class="col-sm-12 col-xl-4"> <!--Formulário para cadastro-->
                     
                         <form action="" id="form-algorithm">
-                            <label class="label-sct2-control" for="">Seu nome:</label>
-                            <input type="text" class="input-sct2-control" name="" >
+                            <label class="label-form-control" for="">Seu nome:</label>
+                            <input type="text" class="input-form-control" name="" >
     
-                            <label class="label-sct2-control" for="">E-mail:</label>
-                            <input type="text" class="input-sct2-control"  name="" id="">
+                            <label class="label-form-control" for="">E-mail:</label>
+                            <input type="text" class="input-form-control"  name="" id="">
     
-                            <label class="label-sct2-control" for="">CPF:</label>
-                            <input type="text" class="input-sct2-control" name="">
+                            <label class="label-form-control" for="">CPF:</label>
+                            <input type="text" class="input-form-control" name="">
     
                             <div class="form-check form-check-inline box-radio">
                                 <input type="radio" class="form-check-input" name="" id="">
-                                <label for="" class="label-sct2-radio">Masculino</label>
+                                <label for="" class="label-form-radio">Masculino</label>
                             </div>
 
                             <div class="form-check form-check-inline box-radio">
                                 <input type="radio" class="form-check-input" name="" id="">
-                                <label for="" class="label-sct2-radio">Feminino</label>
+                                <label for="" class="label-form-radio">Feminino</label>
                             </div>                           
                             <br> <!--Uma gambiarra que funciona! Porém corrigir-->  
                             <button class="btn-send">Enviar</button>
@@ -83,9 +83,9 @@
                 </div>
             </div>
 
-            <div class="row justify-content-center" id="grid-product"> <!--Necessita revisão do alinhamento do grid, pois está desalinhado com as bordas do h1-->
+            <div class="row row-cols-4 justify-content-start" id="grid-product"> <!--Necessita revisão do alinhamento do grid, pois está desalinhado com as bordas do h1-->
                 
-                <button class="btn-see-more">Ainda mais produtos aqui</button>
+                <!--<button class="btn-see-more">Ainda mais produtos aqui</button>-->
 
                 <button type="button" class="btn-lot-more">Tem muito mais aqui. Vem ver!</button>
             </div>
@@ -97,7 +97,7 @@
                     <div class="box-title-line-half">
                         <h1 class="title-line-half">Compartilhe a novidade</h1>
                     </div>
-                    <p class="paragraph-sect4">Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
+                    <p class="paragraph-newsletter">Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
                     <form action="">
                         <div class="row row-cols-xl-2 justify-content-start justify-content-xl-center" id="row-newsletter">
                             <div class="col-sm-12 col-xl-4">
