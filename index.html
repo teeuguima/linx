@@ -48,25 +48,25 @@
                     
                         <form action="" id="form-algorithm">
                             <label class="label-form-control" for="">Seu nome:</label>
-                            <input type="text" class="input-form-control" name="" >
+                            <input type="text" class="input-form-control" name="" id="form-name" required>
     
                             <label class="label-form-control" for="">E-mail:</label>
-                            <input type="text" class="input-form-control"  name="" id="">
+                            <input type="text" class="input-form-control"  name="" id="form-email" required>
     
                             <label class="label-form-control" for="">CPF:</label>
-                            <input type="text" class="input-form-control" name="">
+                            <input type="text" class="input-form-control" name="" id="form-cpf" required>
     
                             <div class="form-check form-check-inline box-radio">
-                                <input type="radio" class="form-check-input" name="" id="">
+                                <input type="radio" class="form-check-input" name="radio-genre" value="male" id="form-radio-male">
                                 <label for="" class="label-form-radio">Masculino</label>
                             </div>
 
                             <div class="form-check form-check-inline box-radio">
-                                <input type="radio" class="form-check-input" name="" id="">
+                                <input type="radio" class="form-check-input" name="radio-genre" value="female" id="form-radio-female">
                                 <label for="" class="label-form-radio">Feminino</label>
                             </div>                           
                             <br> <!--Uma gambiarra que funciona! Porém corrigir-->  
-                            <button class="btn-send">Enviar</button>
+                            <button type="submit" class="btn-send" onclick="validationFormAlgorithm()">Enviar</button>
                         </form>
 
                     
@@ -85,8 +85,6 @@
 
             <div class="row row-cols-4 justify-content-start" id="grid-product"> <!--Necessita revisão do alinhamento do grid, pois está desalinhado com as bordas do h1-->
                 
-                <!--<button class="btn-see-more">Ainda mais produtos aqui</button>-->
-
                 <button type="button" class="btn-lot-more">Tem muito mais aqui. Vem ver!</button>
             </div>
         </div>
@@ -98,20 +96,20 @@
                         <h1 class="title-line-half">Compartilhe a novidade</h1>
                     </div>
                     <p class="paragraph-newsletter">Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
-                    <form action="">
+                    <form action="" id="form-newsletter">
                         <div class="row row-cols-xl-2 justify-content-start justify-content-xl-center" id="row-newsletter">
                             <div class="col-sm-12 col-xl-4">
                                 <label for="" class="label-newsletter">Nome do seu amigo:</label>
                                 <br>
-                                <input type="text" name="name-friend" class="input-newsletter">
+                                <input type="text" id="form-name-friend" class="input-newsletter" required>
                             </div>
                             <div class="col-sm-12 col-xl-4">
                                 <label for="" class="label-newsletter">E-mail:</label>
                                 <br>
-                                <input type="text" name="email-friend" class="input-newsletter">
+                                <input type="text" id="form-email-friend" class="input-newsletter" required>
                             </div>
                             <div class="col text-center">
-                                <button type="submit" class="btn-send-newsletter">Enviar agora</button>
+                                <button type="submit" class="btn-send-newsletter" onclick="validationFormNewsLetter()">Enviar agora</button>
                             </div>
                         </div>
                     </form>
@@ -121,7 +119,6 @@
     </section>
 
     <section id="sect5"> <!--Quinta seção [Rodapé]-->
-        <!--Necessário implementar o design do background diagonal-->
         <div class="diagonal-box-footer">
             <div class="container" id="container-footer">
                 <div class="row justify-content-center">

@@ -1,15 +1,58 @@
 //Criação do arquivo JS para comunicação de api, referente a requisição das informações dos produtos.
 
+let url = "https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1"
 
-function getUrl(url){
+//Função para validação do email e dos campos do formulário
+function validationFormAlgorithm(){
+    const form = document.getElementById("form-algorithm")
+    form.addEventListener("submit", e =>{
+        e.preventDefault();
+    })
+    var er = new RegExp(/^[A-Za-z0-9_\-\.]+@[A-Za-z0-9_\-\.]{2,}\.[A-Za-z0-9]{2,}(\.[A-Za-z0-9])?/);
+    var name = document.getElementById("form-name").value
+    var email = document.getElementById("form-email").value
+    var cpf = document.getElementById("form-cpf").value
+    var radio = document.querySelector('input[name="radio-genre"]:checked').value;
+    console.log(email)
+    console.log(radio)
+    
+    if( email == '' || !er.test(email) ) { 
+        alert('Preencha o campo email corretamente'); 
+        return false; 
+    }
+    
+    // Se passou por essas validações exibe um alert
+    alert( 'Formulário enviado com sucesso!');
+}
+
+function validationFormNewsLetter(){
+    const form = document.getElementById("form-newsletter")
+    form.addEventListener("submit", e =>{
+        e.preventDefault();
+    })
+    var er = new RegExp(/^[A-Za-z0-9_\-\.]+@[A-Za-z0-9_\-\.]{2,}\.[A-Za-z0-9]{2,}(\.[A-Za-z0-9])?/);
+    var name = document.getElementById("form-name-friend").value
+    var email = document.getElementById("form-email-friend").value
+    
+    if( email == '' || !er.test(email) ) { 
+        alert('Preencha o campo email corretamente'); 
+        return false; 
+    }
+    
+    // Se passou por essas validações exibe um alert
+    alert( 'Formulário enviado com sucesso!');
+}
+
+//Função para comunicação com API via Http.
+function getUrl(url){ 
     let request = new XMLHttpRequest()
     request.open("GET", url, false )
     request.send()
     return request.responseText
 }
 
-
-function createProducts(products, elementHTML){
+//Função que cria os elementos em HTML atráves do DOM.
+function createProducts(products, elementHTML){ 
     let grid_product = document.createElement("div")
     let box_product = document.createElement("div")
     grid_product.classList.add("col" , "box-product")
@@ -64,10 +107,16 @@ function createProducts(products, elementHTML){
     return box_product
 }
 
-function products(){
-    let data_products = getUrl("https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1") 
-    let products = JSON.parse(data_products)
 
+/*
+    Função principal que executa a chamada da função de requisição e ao obter resposta, 
+    chama a função de criação dos elementos no DOM. Por fim, os insere no container responsável
+    pela grade de produtos. 
+*/
+function products(){ 
+    let data_products = getUrl(url) 
+    let products = JSON.parse(data_products)
+    console.log(products)
     let box_products = document.getElementById("grid-product")
     products?.products.forEach(element => {
         console.log(element)
@@ -85,5 +134,5 @@ function products(){
     box_products.appendChild(div_btn)
 }
 
-products()
+products() //Chamada da função a ser executada.
 
