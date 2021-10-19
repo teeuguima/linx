@@ -2,45 +2,50 @@
 
 let url = "https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1"
 
-//Função para validação do email e dos campos do formulário
-function validationFormAlgorithm(){
-    const form = document.getElementById("form-algorithm")
-    form.addEventListener("submit", e =>{
-        e.preventDefault();
-    })
+
+//Função para validação do email
+function validateEmail(email){
     var er = new RegExp(/^[A-Za-z0-9_\-\.]+@[A-Za-z0-9_\-\.]{2,}\.[A-Za-z0-9]{2,}(\.[A-Za-z0-9])?/);
-    var name = document.getElementById("form-name").value
-    var email = document.getElementById("form-email").value
-    var cpf = document.getElementById("form-cpf").value
-    var radio = document.querySelector('input[name="radio-genre"]:checked').value;
-    console.log(email)
-    console.log(radio)
-    
     if( email == '' || !er.test(email) ) { 
         alert('Preencha o campo email corretamente'); 
         return false; 
     }
-    
     // Se passou por essas validações exibe um alert
     alert( 'Formulário enviado com sucesso!');
 }
 
-function validationFormNewsLetter(){
-    const form = document.getElementById("form-newsletter")
+//Função que impede o recarregamento da página
+function noReload(form_submit){
+    const form = form_submit
     form.addEventListener("submit", e =>{
         e.preventDefault();
     })
-    var er = new RegExp(/^[A-Za-z0-9_\-\.]+@[A-Za-z0-9_\-\.]{2,}\.[A-Za-z0-9]{2,}(\.[A-Za-z0-9])?/);
+}
+
+//Função para captura dos campos do formulário de cadastramento de recomendações
+function submitFormAlgorithm(){
+   
+    noReload(document.getElementById("form-algorithm"))
+
+    var name = document.getElementById("form-name").value
+    var email = document.getElementById("form-email").value
+    var cpf = document.getElementById("form-cpf").value
+    var radio = document.querySelector('input[name="radio-genre"]:checked').value;
+    
+    validateEmail(email)
+        
+    
+    
+}
+
+//Função para captura dos campos do formulário de newsletter 
+function submitFormNewsLetter(){
+    noReload(document.getElementById("form-newsletter"))
     var name = document.getElementById("form-name-friend").value
     var email = document.getElementById("form-email-friend").value
     
-    if( email == '' || !er.test(email) ) { 
-        alert('Preencha o campo email corretamente'); 
-        return false; 
-    }
+    validateEmail(email)
     
-    // Se passou por essas validações exibe um alert
-    alert( 'Formulário enviado com sucesso!');
 }
 
 //Função para comunicação com API via Http.
@@ -55,7 +60,7 @@ function getUrl(url){
 function createProducts(products, elementHTML){ 
     let grid_product = document.createElement("div")
     let box_product = document.createElement("div")
-    grid_product.classList.add("col" , "box-product")
+    grid_product.classList.add("col", "col-sm-12", "col-md-6" , "box-product")
     elementHTML.appendChild(grid_product)
 
     let img = document.createElement("img")
